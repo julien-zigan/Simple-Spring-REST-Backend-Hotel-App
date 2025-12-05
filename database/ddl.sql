@@ -2,11 +2,11 @@ USE hotel_db;
 
 CREATE TABLE reservations (
       id BIGINT NOT NULL AUTO_INCREMENT,
-      checkInDate DATE NOT NULL ,
-      checkOutDate DATE NOT NULL ,
-      guestName NVARCHAR(255) NOT NULL ,
-      guestEmail NVARCHAR(255) NOT NULL ,
-      roomNumber INT NOT NULL ,
+      check_in_date DATE NOT NULL ,
+      check_out_date DATE NOT NULL ,
+      guest_name NVARCHAR(255) NOT NULL ,
+      guest_email NVARCHAR(255) NOT NULL ,
+      room_number INT NOT NULL ,
 
       PRIMARY KEY (id)
 );

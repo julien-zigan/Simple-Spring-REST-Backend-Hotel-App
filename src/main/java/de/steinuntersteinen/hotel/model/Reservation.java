@@ -1,16 +1,34 @@
 package de.steinuntersteinen.hotel.model;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
 public class Reservation {
 
+    @Id
+    @Column(name = "id", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+
+    @Column(name = "check_in_date")
     private Date checkInDate;
+
+    @Column(name = "check_out_date")
     private Date checkOutDate;
+
+    @Column(name = "guest_name")
     private String guestName;
+
+    @Column(name = "guest_email")
     private String guestEmail;
+
+    @Column(name = "room_number")
     private int roomNumber;
+
+    public Reservation() {}
 
     public Reservation(String id,
                        Date checkInDate,

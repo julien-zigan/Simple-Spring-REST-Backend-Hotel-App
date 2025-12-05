@@ -4,18 +4,18 @@ DROP TABLE IF EXISTS reservations;
 
 CREATE TABLE reservations (
       id BIGINT NOT NULL AUTO_INCREMENT,
-      checkInDate DATE NOT NULL ,
-      checkOutDate DATE NOT NULL ,
-      guestName NVARCHAR(255) NOT NULL ,
-      guestEmail NVARCHAR(255) NOT NULL ,
-      roomNumber INT NOT NULL ,
+      check_in_date DATE NOT NULL ,
+      check_out_date DATE NOT NULL ,
+      guest_name NVARCHAR(255) NOT NULL ,
+      guest_email NVARCHAR(255) NOT NULL ,
+      room_number INT NOT NULL ,
 
       PRIMARY KEY (id)
 );
 
 -- Test Dataset
 
-INSERT INTO reservations (checkInDate, checkOutDate, guestName, guestEmail, roomNumber)
+INSERT INTO reservations (check_in_date, check_out_date, guest_name, guest_email, room_number)
 VALUES
     ('2025-12-01','2025-12-3','Henry Miller','henry.miller@email.com',12),
     ('2025-11-15','2025-11-20','Alice Johnson','alice.johnson@email.com',7),
