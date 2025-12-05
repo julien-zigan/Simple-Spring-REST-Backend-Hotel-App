@@ -23,4 +23,9 @@ public class ReservationRepositoryImpl implements ReservationRepository {
                 .createQuery("FROM Reservation", Reservation.class)
                 .getResultList();
     }
+
+    @Override
+    public Reservation findById(long id) {
+        return entityManager.find(Reservation.class, id);
+    }
 }

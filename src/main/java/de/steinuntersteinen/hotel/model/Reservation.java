@@ -2,6 +2,7 @@ package de.steinuntersteinen.hotel.model;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -15,10 +16,10 @@ public class Reservation {
     private String id;
 
     @Column(name = "check_in_date")
-    private Date checkInDate;
+    private LocalDate checkInDate;
 
     @Column(name = "check_out_date")
-    private Date checkOutDate;
+    private LocalDate checkOutDate;
 
     @Column(name = "guest_name")
     private String guestName;
@@ -32,8 +33,8 @@ public class Reservation {
     public Reservation() {}
 
     public Reservation(String id,
-                       Date checkInDate,
-                       Date checkOutDate,
+                       LocalDate checkInDate,
+                       LocalDate checkOutDate,
                        String guestName,
                        String guestEmail,
                        int roomNumber) {
@@ -53,19 +54,19 @@ public class Reservation {
         this.id = id;
     }
 
-    public Date getCheckInDate() {
+    public LocalDate getCheckInDate() {
         return checkInDate;
     }
 
-    public void setCheckInDate(Date checkInDate) {
+    public void setCheckInDate(LocalDate checkInDate) {
         this.checkInDate = checkInDate;
     }
 
-    public Date getCheckOutDate() {
+    public LocalDate getCheckOutDate() {
         return checkOutDate;
     }
 
-    public void setCheckOutDate(Date checkOutDate) {
+    public void setCheckOutDate(LocalDate checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
 
