@@ -5,6 +5,7 @@ import de.steinuntersteinen.hotel.repo.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,4 +27,10 @@ class ReservationController {
     public ResponseEntity<List<Reservation>> getReservations() {
         return  ResponseEntity.ok(reservationRepository.findAll());
     }
+
+    @GetMapping("/{reservationId}")
+    public ResponseEntity<Reservation> getReservationById(@PathVariable("reservationId") long reservationId) {
+        return ResponseEntity.ok(reservationRepository.findById(reservationId));
+    }
+
 }
